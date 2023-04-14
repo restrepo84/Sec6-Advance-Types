@@ -27,7 +27,7 @@ class Car {
 }
 class Truck {
     drive() {
-        console.log("Driving a truck... ");
+        console.log("Driving a truck...");
     }
     loadCargo(amount) {
         console.log("Loading cargo ..." + amount);
@@ -55,4 +55,8 @@ function moveAnimal(animal) {
     console.log("Moving at speed: " + speed);
 }
 moveAnimal({ type: "bird", flyingSpeed: 10 });
+const userInputElement = document.getElementById("user-input");
+if (userInputElement) {
+    userInputElement.value = "Hi there!";
+}
 //# sourceMappingURL=app.js.map

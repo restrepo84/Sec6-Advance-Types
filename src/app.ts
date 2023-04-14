@@ -9,6 +9,7 @@ type Employee = {
 };
 
 // interface ElevatedEmployee extends Employee, Admin {}
+
 type ElevatedEmployee = Admin & Employee;
 
 const e1: ElevatedEmployee = {
@@ -51,8 +52,9 @@ class Car {
 
 class Truck {
   drive() {
-    console.log("Driving a truck... ");
+    console.log("Driving a truck...");
   }
+
   loadCargo(amount: number) {
     console.log("Loading cargo ..." + amount);
   }
@@ -96,4 +98,12 @@ function moveAnimal(animal: Animal) {
   }
   console.log("Moving at speed: " + speed);
 }
+
 moveAnimal({ type: "bird", flyingSpeed: 10 });
+
+// const userInputElement = <HTMLInputElement>document.getElementById('user-input')!;
+const userInputElement = document.getElementById("user-input");
+
+if (userInputElement) {
+  (userInputElement as HTMLInputElement).value = "Hi there!";
+}
